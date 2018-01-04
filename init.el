@@ -27,8 +27,7 @@
 
 (custom-set-faces
  '(neo-dir-link-face ((t (:height 80))))
- '(neo-file-link-face ((t (:height 80))))
- '(sml/modified ((t (:inherit sml/not-modified :foreground "OrangeRed1" :weight bold)))))
+ '(neo-file-link-face ((t (:height 80)))))
 
 ;;----------------------------------------------------------------------------
 ;; load configuration
