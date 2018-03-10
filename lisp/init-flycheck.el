@@ -1,13 +1,13 @@
 ;;----------------------------------------------------------------------------
-;; configure tern
+;; configure flycheck
 ;;----------------------------------------------------------------------------
 
-(autoload 'tern-mode "tern.el" nil t)
+(require 'flycheck)
 
-(add-hook 'web-mode-hook (lambda () (tern-mode t)))
+(flycheck-add-mode 'typescript-tslint 'web-mode)
 
 ;;----------------------------------------------------------------------------
-;; provide tern configuration
+;; provide company mode configuration
 ;;----------------------------------------------------------------------------
 
-(provide 'init-tern)
+(provide 'init-flycheck)

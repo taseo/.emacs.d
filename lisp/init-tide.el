@@ -1,16 +1,18 @@
 ;;----------------------------------------------------------------------------
-;; configure company mode
+;; configure tide
 ;;----------------------------------------------------------------------------
 
-(require 'company)
-
-(setq company-idle-delay .3)
-(setq company-tooltip-align-annotations t)
-
-(add-hook 'after-init-hook 'global-company-mode)
+(defun setup-tide-mode ()
+  (interactive)
+  (tide-setup)
+  (flycheck-mode +1)
+  (setq flycheck-check-syntax-automatically '(save mode-enabled))
+  (eldoc-mode +1)
+  (tide-hl-identifier-mode +1)
+  (company-mode +1))
 
 ;;----------------------------------------------------------------------------
-;; provide company mode configuration
+;; provide tide configuration
 ;;----------------------------------------------------------------------------
 
-(provide 'init-company)
+(provide 'init-tide)
