@@ -21,7 +21,7 @@
 ;; set font
 ;;----------------------------------------------------------------------------
 
-(set-frame-font "DejaVu Sans Mono 12" nil t)
+(set-frame-font "Inconsolata 13" nil t)
 
 ;;----------------------------------------------------------------------------
 ;; remove scrollbar, toolbar and menubar

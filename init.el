@@ -31,6 +31,7 @@
 
 (require 'init-gui)
 (require 'init-generic)
+(require 'init-edit-utils)
 (require 'init-mode-line)
 (require 'init-ido)
 (require 'init-neotree)
