@@ -36,9 +36,10 @@
 (require 'init-ido)
 (require 'init-neotree)
 (require 'init-flycheck)
+(require 'init-company)
+(require 'init-irony)
 (require 'init-web-mode)
 (require 'init-tide)
-(require 'init-company)
 (require 'init-smartparens)
 
 ;;----------------------------------------------------------------------------
