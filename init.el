@@ -1,49 +1,32 @@
-;;----------------------------------------------------------------------------
-;; init package
-;;----------------------------------------------------------------------------
+;;; init.el
 
-(package-initialize)
-(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+;; init package
+(require 'package)
+
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 
-;;----------------------------------------------------------------------------
-;; set custom set variables
-;;----------------------------------------------------------------------------
+(package-initialize)
 
-(custom-set-variables
- '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
- '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
- '(diff-hl-margin-mode t)
- '(global-diff-hl-mode t)
- '(uniquify-buffer-name-style (quote post-forward) nil (uniquify)))
 
-;;----------------------------------------------------------------------------
-;; set custom faces
-;;----------------------------------------------------------------------------
 
-(custom-set-faces
- '(neo-dir-link-face ((t (:height 80))))
- '(neo-file-link-face ((t (:height 80)))))
+;; custom loads paths
+(add-to-list 'load-path (expand-file-name "elisp" user-emacs-directory))
 
-;;----------------------------------------------------------------------------
-;; load configuration
-;;----------------------------------------------------------------------------
+
+
+(custom-set-variables)
+(custom-set-faces)
+
+
 
 (require 'init-gui)
 (require 'init-generic)
-(require 'init-edit-utils)
-(require 'init-mode-line)
-(require 'init-ido)
-(require 'init-neotree)
-(require 'init-flycheck)
-(require 'init-company)
+(require 'init-helm)
+(require 'init-sr-speedbar)
 (require 'init-irony)
-(require 'init-web-mode)
-(require 'init-tide)
-(require 'init-smartparens)
+(require 'init-company)
+(require 'init-rtags)
 
-;;----------------------------------------------------------------------------
-;; provide init
-;;----------------------------------------------------------------------------
+
 
 (provide 'init)
